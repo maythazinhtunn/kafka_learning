@@ -1,0 +1,11 @@
+create topic
+
+./kafka-topic.sh --boostrap-server localhost:9092 --topic demo_testing1 --create --partitions 1 --replication-factor 1
+
+create producers
+./kafka-console-producer.sh --topic demo_testing1 --bootstrap-server localhost:9092
+./kafka-console-producer.sh --topic demo_testing1 --bootstrap-server localhost:9092
+
+create consumers
+./kafka-console-consumer.sh --topic demo_testing1 --from-beginning --bootstrap-server localhost:9092 
+./kafka-console-consumer.sh --topic demo_testing1 --from-beginning --bootstrap-server localhost:9092 
